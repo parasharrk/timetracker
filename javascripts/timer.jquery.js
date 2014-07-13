@@ -19,14 +19,13 @@
       editable: true   //this will let users make changes to the time
 		};
 
-		this.options = $.extend(defaults, options);
 		this.$el = $(element);
-
-
-    
-
+		this.options = $.extend(defaults, options);
+		this.options.seconds = this.$el.data('ttseconds') || 0;
+		if(this.options.seconds > 0) {
+		  this.options.action = 'resume';
+	  }
     this.init();
-		
 	};
 
 	/*
@@ -164,12 +163,13 @@
     } else {
       displayStr = this.hrsStr + ':' + this.minsStr + ':' + this.secsStr;
     }
-
     if(this.elType == 'input' || this.elType == 'textarea') this.$el.val(displayStr);
     else this.$el.html(displayStr);
 
     //assign the number of seconds to this element's data attribute for seconds
     this.$el.data('seconds', this.get_seconds());
+    var title = this.$el.closest('.task').find('.title').text();
+    localStorage[title] = this.$el.data('seconds');
   }
   
   jQueryTimer.prototype.timeToString = function () {

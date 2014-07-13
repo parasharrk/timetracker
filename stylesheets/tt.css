@@ -1,0 +1,41 @@
+
+.feature-btns {
+	padding: 5px;
+}
+.float-right {
+	float: right;
+}
+.container {
+	width: 290px;
+	min-height: 100px;
+	padding: 10px;
+}
+.btn {
+	border: 1px solid rgba(77, 68, 68, 0.67);
+}
+#title {
+	width: 245px;
+}
+.timer {
+  display: inline;
+}
+.task.row {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.mini-btn.start {
+  background-color: rgb(149, 238, 149);
+}
+.mini-btn.stop {
+  background-color: rgb(233, 136, 136);
+}
+.mini-btn.resume {
+  background-color: rgb(246, 201, 142);
+}
+.mini-btn.start, .mini-btn.stop, .mini-btn.resume {
+  position: absolute;
+  float: right;
+  right: 40px;
+  width: 70px;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "A browser action with a popup that changes the page color.",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Set this page's color.",
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "images/glyphicons-halflings.png",
+    "images/glyphicons-halflings-white.png"
+  ],
+  "manifest_version": 2
+}
